@@ -1,0 +1,41 @@
+# Redirects 301: WordPress antiguo -> sitio nuevo
+# Preservar SEO de URLs ya indexadas por Google
+
+# Páginas principales
+Redirect 301 /products/ /#menu
+Redirect 301 /shop/ /#menu
+Redirect 301 /cart/ /#menu
+Redirect 301 /checkout/ /#menu
+Redirect 301 /my-account/ /
+Redirect 301 /about-us/ /#nosotros
+Redirect 301 /contacto/ /#ubicacion
+
+# Fichas de producto individuales -> sección menú
+Redirect 301 /product/la-brutal-2/ /#menu
+Redirect 301 /product/chef/ /#menu
+Redirect 301 /product/hamburguesas-a-lo-pobre/ /#menu
+Redirect 301 /product/royal-parrillero/ /#menu
+Redirect 301 /product/pecho-broaster/ /#menu
+Redirect 301 /product/pierna-broaster/ /#menu
+Redirect 301 /product/alita-broaster/ /#menu
+Redirect 301 /product/salchipapa-simple/ /#menu
+Redirect 301 /product/salchipapa-especial/ /#menu
+Redirect 301 /product/salchi-crispy-trozos/ /#menu
+Redirect 301 /product/inka-cola/ /#menu
+Redirect 301 /product/coca-cola/ /#menu
+Redirect 301 /product/sprite/ /#menu
+Redirect 301 /product/pepsi/ /#menu
+Redirect 301 /product/7up/ /#menu
+
+# Posts de blog (contenido demo del theme, sin valor real) -> home
+Redirect 301 /hello-world/ /
+Redirect 301 /consequat-semper-viverra-nam-libero/ /
+Redirect 301 /malesuada-bibendum-arcu-elementum/ /
+Redirect 301 /accumsan-tortor-posuere-acut-consequat/ /
+Redirect 301 /condimentum-odvenenatis-vestibulum-dapibus/ /
+Redirect 301 /lobortis-elementum-nibhtellus-molestie-mauris/ /
+
+# Forzar HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

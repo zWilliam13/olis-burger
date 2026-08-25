@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oli's Burger — Hamburguesas Artesanales en SJL y Cercado de Lima</title>
+<meta name="description" content="Hamburguesas artesanales, pollo broaster y salchipapas. 25 años en San Juan de Lurigancho y Cercado de Lima. Pedidos por WhatsApp.">
+<link rel="canonical" href="https://olisburger.com/">
+<meta property="og:type" content="restaurant.menu">
+<meta property="og:title" content="Oli's Burger — Hamburguesas Artesanales">
+<meta property="og:description" content="25 años preparando las hamburguesas más bravas y caseras de la zona. Pollo broaster, salchipapas y bebidas. Pedidos por WhatsApp.">
+<meta property="og:image" content="https://olisburger.com/assets/hero.jpg">
+<meta property="og:url" content="https://olisburger.com/">
+<meta property="og:locale" content="es_PE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Oli's Burger — Hamburguesas Artesanales">
+<meta name="twitter:description" content="25 años preparando las hamburguesas más bravas y caseras de la zona. Pedidos por WhatsApp.">
+<meta name="twitter:image" content="https://olisburger.com/assets/hero.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%94%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,600;0,700;0,800;0,900;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Oli's Burger",
+  "image": "https://olisburger.com/assets/hero.jpg",
+  "servesCuisine": ["Hamburguesas", "Comida rápida", "Pollo broaster"],
+  "priceRange": "S/ 5 - S/ 25",
+  "telephone": "+51938132492",
+  "acceptsReservations": "false",
+  "url": "https://olisburger.com/",
+  "location": [
+    {
+      "@type": "Place",
+      "name": "Oli's Burger - Sede SJL Principal",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Pirámide del Sol 398",
+        "addressLocality": "San Juan de Lurigancho",
+        "addressRegion": "Lima",
+        "addressCountry": "PE"
+      }
+    },
+    {
+      "@type": "Place",
+      "name": "Oli's Burger - Sede Cercado",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Luis Braille 1489",
+        "addressLocality": "Cercado de Lima",
+        "addressRegion": "Lima",
+        "addressCountry": "PE"
+      }
+    }
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "18:00",
+    "closes": "03:00"
+  },
+  "sameAs": [
+    "https://www.facebook.com/OlisBurger/",
+    "https://www.instagram.com/olis_burger_2/"
+  ]
+}
+</script>
+<style>
+  :root{
+    --primary:#DE7908;
+    --secondary:#65170D;
+    --accent:#128C34;
+    --cheese:#F0BC50;
+    --background:#FCFBFA;
+    --background-dark:#1E160F;
+    --text:#1E160F;
+    --text-light:#FFFFFF;
+    --border:#CBBFB8;
+    --card:#FFFFFF;
+    --muted:#5C564B;
+    --display:'Bodoni Moda',serif;
+    --sans:'Inter',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--background);
+    color:var(--text);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.6;
+    position:relative;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  ::selection{background:var(--primary);color:var(--text-light);}
+  :focus-visible{outline:3px solid var(--primary);outline-offset:3px;}
+  h1,h2,h3{font-family:var(--display);text-transform:uppercase;line-height:1;letter-spacing:-0.01em;font-weight:800;}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 24px;}
+  .eyebrow-label{font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;color:var(--muted);}
+  .wa-icon{width:16px;height:16px;fill:currentColor;flex-shrink:0;}
+  .status-dot{width:8px;height:8px;display:inline-block;margin-right:6px;border-radius:50%;}
+  .status-dot.open{background:var(--accent);}
+  .status-dot.closed{background:var(--muted);}
+
+  /* ---------- BUTTONS ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    font-family:var(--sans);font-weight:700;font-size:0.84rem;letter-spacing:0.01em;
+    padding:13px 26px;border:1.5px solid transparent;border-radius:8px;
+    cursor:pointer;transition:background .15s, color .15s, border-color .15s, transform .08s;
+    white-space:nowrap;
+  }
+  .btn:active{transform:scale(0.97);}
+  .btn-red{background:var(--primary);color:var(--text-light);}
+  .btn-red:hover{background:var(--secondary);}
+  .btn-outline{background:transparent;color:var(--text);border-color:var(--text);}
+  .btn-outline:hover{background:var(--background-dark);color:var(--text-light);}
+  .btn-outline-light{background:transparent;color:var(--text-light);border-color:rgba(255,255,255,0.55);}
+  .btn-outline-light:hover{background:var(--text-light);color:var(--primary);border-color:var(--text-light);}
+  .btn-pill{border-radius:999px;}
+  .btn-block{width:100%;justify-content:center;}
+  .btn:disabled{opacity:0.35;cursor:not-allowed;}
+
+  /* ---------- ANNOUNCEMENT BAR ---------- */
+  .announce{background:var(--primary);color:var(--text-light);text-align:center;padding:9px 16px;font-size:0.78rem;font-weight:600;}
+
+  /* ---------- SCROLL REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease-out, transform .6s ease-out;}
+  .reveal.in-view{opacity:1;transform:translateY(0);}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky;top:0;z-index:100;background:var(--background-dark);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1240px;margin:0 auto;gap:20px;}
+  .brand{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:var(--display);font-size:1.3rem;font-weight:800;color:var(--text-light);letter-spacing:-0.01em;
+  }
+  .brand img{width:32px;height:32px;object-fit:contain;border-radius:50%;}
+  nav.links{display:none;gap:28px;}
+  nav.links a{
+    font-size:0.8rem;font-weight:600;color:var(--text-light);opacity:0.82;
+    padding-bottom:3px;border-bottom:2px solid transparent;
+    transition:opacity .15s, border-color .15s;
+  }
+  nav.links a:hover{opacity:1;}
+  nav.links a.current{opacity:1;border-color:var(--primary);}
+  @media(min-width:860px){nav.links{display:flex;}}
+  .header-cta{display:none;}
+  @media(min-width:640px){.header-cta{display:inline-flex;}}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;min-height:600px;display:flex;align-items:flex-end;overflow:hidden;background:var(--background-dark);}
+  .hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .hero::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(30,22,15,0.05) 25%, rgba(30,22,15,0.55) 68%, rgba(30,22,15,0.88) 100%);
+  }
+  .hero-content{position:relative;z-index:2;padding:48px 24px 52px;max-width:1240px;margin:0 auto;width:100%;}
+  .hero-eyebrow{display:flex;align-items:center;flex-wrap:wrap;gap:10px 16px;margin-bottom:18px;}
+  .status-badge{display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,0.4);border-radius:999px;padding:5px 14px;color:var(--text-light);font-size:0.7rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;}
+  .hero-eyebrow .dot{width:8px;height:8px;background:var(--primary);border-radius:50%;}
+  .hero-eyebrow-text{color:var(--text-light);font-size:0.76rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;}
+  .hero h1{color:var(--text-light);font-size:clamp(2.6rem,7.5vw,5rem);margin-bottom:18px;overflow-wrap:break-word;text-shadow:0 2px 16px rgba(0,0,0,0.4);}
+  @media(max-width:480px){.hero h1{font-size:clamp(2rem,9vw,2.6rem);}}
+  .hero h1 span{color:var(--primary);text-shadow:0 2px 20px rgba(0,0,0,0.55);}
+  .hero p.lead{font-size:1.05rem;line-height:1.55;max-width:52ch;margin-bottom:30px;color:rgba(255,255,255,0.88);}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;}
+
+  /* ---------- DATA STRIP ---------- */
+  .datastrip{background:var(--background);border-bottom:1px solid rgba(0,0,0,0.08);padding:36px 0;}
+  .datastrip-grid{display:grid;grid-template-columns:repeat(2,1fr);}
+  @media(min-width:700px){.datastrip-grid{grid-template-columns:repeat(4,1fr);}}
+  .datastrip-cell{padding:12px 20px;text-align:center;border-right:1px solid rgba(0,0,0,0.08);}
+  .datastrip-cell:last-child{border-right:none;}
+  @media(max-width:699px){.datastrip-cell:nth-child(2n){border-right:none;}}
+  .datastrip-cell b{display:block;font-family:var(--display);font-size:1.7rem;font-weight:800;color:var(--primary);}
+  .datastrip-cell span{font-size:0.72rem;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);}
+
+  /* ---------- SECTION HEAD ---------- */
+  section{padding:64px 0;}
+  #menu{background:var(--primary);color:var(--text-light);}
+  .section-head{text-align:center;max-width:640px;margin:0 auto 44px;}
+  .section-head .eyebrow-label{display:inline-flex;align-items:center;gap:8px;justify-content:center;margin-bottom:10px;}
+  .section-head .eyebrow-label::before{content:"✳";color:var(--primary);}
+  #menu .section-head .eyebrow-label{color:rgba(255,255,255,0.85);}
+  #menu .section-head .eyebrow-label::before{color:var(--text-light);}
+  .section-head h2{font-size:clamp(2rem,5vw,2.9rem);margin-bottom:10px;}
+  #menu .section-head h2{color:var(--text-light);}
+  .section-head p{color:var(--muted);font-size:1rem;}
+  #menu .section-head p{color:rgba(255,255,255,0.85);}
+
+  /* ---------- CATEGORY TABS ---------- */
+  .cat-tabs{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:36px;}
+  .cat-tab{
+    font-family:var(--sans);font-weight:700;font-size:0.82rem;
+    padding:11px 22px;background:transparent;border:1.5px solid rgba(255,255,255,0.5);border-radius:999px;
+    color:var(--text-light);cursor:pointer;white-space:nowrap;
+    transition:background .15s, color .15s;
+  }
+  .cat-tab:hover:not(.active){background:rgba(255,255,255,0.12);}
+  .cat-tab.active{background:var(--text-light);color:var(--primary);border-color:var(--text-light);}
+
+  /* ---------- PRODUCT GRID ---------- */
+  .product-grid{display:grid;grid-template-columns:1fr;gap:24px;}
+  @media(min-width:640px){.product-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(min-width:1000px){.product-grid{grid-template-columns:repeat(3,1fr);}}
+  .product-card{
+    background:var(--card);border-radius:14px;overflow:hidden;
+    display:flex;flex-direction:column;
+    box-shadow:0 10px 24px rgba(0,0,0,0.18);
+    transition:transform .2s, box-shadow .2s;
+  }
+  .product-card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(0,0,0,0.24);}
+  .product-photo{
+    aspect-ratio:4/3;overflow:hidden;position:relative;
+    background-color:#eee;
+    background-image:repeating-linear-gradient(135deg, rgba(10,10,10,0.05) 0 10px, transparent 10px 20px);
+    background-size:200% 200%;
+    animation:skeleton-shimmer 1.8s linear infinite;
+  }
+  .product-photo img{width:100%;height:100%;object-fit:cover;transition:transform .3s;}
+  .product-card:hover .product-photo img{transform:scale(1.05);}
+  @keyframes skeleton-shimmer{
+    0%{background-position:0% 0%;}
+    100%{background-position:-40% -40%;}
+  }
+  .product-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1;}
+  .product-name{font-family:var(--sans);font-weight:700;font-size:1rem;color:var(--text);}
+  .product-price-row{display:flex;align-items:baseline;justify-content:space-between;margin-top:auto;padding-top:6px;}
+  .leader{flex:1;margin:0 8px 5px;border-bottom:1.5px dotted var(--border);}
+  .product-price{font-family:var(--display);font-weight:800;font-size:1.05rem;color:var(--primary);}
+  .qty-row{display:flex;align-items:center;gap:10px;margin-top:10px;}
+  .qty-btn{
+    width:36px;height:36px;border-radius:50%;border:1.5px solid var(--text);background:var(--background);
+    font-weight:800;font-size:1.1rem;cursor:pointer;transition:background .15s, color .15s;
+  }
+  .qty-btn:hover{background:var(--background-dark);color:var(--text-light);}
+  .qty-val{flex:1;text-align:center;font-weight:700;}
+  .add-btn{margin-top:10px;}
+
+  /* ---------- TICKET / ORDER PANEL ---------- */
+  .ticket-wrap{position:sticky;bottom:0;z-index:90;background:var(--background-dark);color:var(--text-light);}
+  .ticket-bar{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;cursor:pointer;gap:16px;max-width:1240px;margin:0 auto;}
+  .ticket-bar .eyebrow-label{display:flex;align-items:center;color:var(--text-light);opacity:0.9;}
+  .ticket-count{
+    background:var(--primary);color:var(--text-light);width:24px;height:24px;border-radius:50%;
+    display:inline-flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:800;
+    margin-right:10px;transition:transform .2s;
+  }
+  .ticket-count.bump{animation:bump .35s ease-out;}
+  @keyframes bump{0%{transform:scale(1);}40%{transform:scale(1.4);}100%{transform:scale(1);}}
+  .ticket-total{font-family:var(--display);font-size:1.15rem;font-weight:800;}
+  .ticket-bar-right{display:flex;align-items:center;gap:10px;}
+  .ticket-chevron{font-size:0.85rem;transition:transform .2s;opacity:0.8;}
+  .ticket-bar.open .ticket-chevron{transform:rotate(180deg);}
+  .ticket-delivery{font-size:0.72rem;font-weight:700;color:var(--primary);}
+  .ticket-panel{display:none;max-height:50vh;overflow-y:auto;border-top:1px solid rgba(255,255,255,0.15);}
+  .ticket-panel.open{display:block;}
+  .ticket-items{padding:16px 24px;max-width:1240px;margin:0 auto;}
+  .ticket-item{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.15);font-size:0.85rem;}
+  .ticket-item .name{flex:none;}
+  .ticket-item .line-total{font-weight:700;}
+  .ticket-empty{padding:24px;text-align:center;opacity:0.6;font-style:italic;}
+  .ticket-footer{padding:16px 24px 22px;max-width:1240px;margin:0 auto;border-top:1px solid rgba(255,255,255,0.15);display:flex;flex-direction:column;gap:14px;}
+  .ticket-total-row{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--display);font-size:1.3rem;font-weight:800;}
+  .ticket-total-row span:last-child{color:var(--primary);}
+  .ticket-note{font-size:0.7rem;opacity:0.6;}
+
+  /* ---------- SOCIAL PROOF ---------- */
+  .proof-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+  @media(min-width:800px){.proof-grid{grid-template-columns:repeat(4,1fr);}}
+  .proof-cell{background:var(--card);border-radius:14px;padding:26px 18px;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,0.08);min-width:0;}
+  .proof-cell b{display:block;font-family:var(--display);font-size:1.6rem;font-weight:800;color:var(--primary);margin-bottom:6px;}
+  .proof-cell span{font-size:0.72rem;letter-spacing:0.04em;text-transform:uppercase;color:var(--muted);display:block;}
+  .proof-cell .src{font-size:0.64rem;opacity:0.65;margin-top:6px;display:block;}
+
+  /* ---------- STORY / NOSOTROS ---------- */
+  .story-block{max-width:60ch;margin:0 auto;text-align:center;}
+  .story-quote{
+    font-family:var(--display);font-weight:600;font-style:italic;text-transform:none;
+    font-size:clamp(1.3rem,3vw,1.85rem);line-height:1.4;margin-bottom:20px;color:var(--text);
+  }
+  .story-sub{color:var(--muted);font-size:0.95rem;line-height:1.6;}
+
+  /* ---------- LOCATIONS ---------- */
+  .loc-grid{display:grid;grid-template-columns:1fr;gap:24px;}
+  @media(min-width:800px){.loc-grid{grid-template-columns:1fr 1fr;}}
+  .loc-card{background:var(--card);border-radius:14px;padding:28px;box-shadow:0 6px 18px rgba(0,0,0,0.08);min-width:0;}
+  .loc-map{border-radius:10px;overflow:hidden;margin-bottom:20px;border:1px solid rgba(0,0,0,0.08);}
+  .loc-map iframe{width:100%;height:200px;display:block;border:0;}
+  .loc-card h3{font-family:var(--display);font-weight:800;font-size:1.3rem;margin-bottom:18px;color:var(--text);text-transform:none;}
+  .loc-row{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid rgba(0,0,0,0.08);font-size:0.85rem;}
+  .loc-row:last-child{border-bottom:none;}
+  .loc-row .k{color:var(--muted);text-transform:uppercase;font-size:0.68rem;letter-spacing:0.06em;padding-top:2px;}
+  .loc-row .v{font-weight:600;text-align:right;min-width:0;}
+  .loc-map-btn{margin-top:18px;width:100%;justify-content:center;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--primary);color:var(--text-light);padding:48px 0 24px;}
+  .footer-brand{font-family:var(--display);font-size:1.4rem;font-weight:800;margin-bottom:10px;}
+  .foot-grid{display:grid;grid-template-columns:1fr;gap:32px;margin-bottom:32px;}
+  @media(min-width:700px){.foot-grid{grid-template-columns:1.2fr 1fr 1fr;}}
+  .foot-col h4{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:14px;opacity:0.8;}
+  .foot-col a{display:block;font-size:0.85rem;padding:5px 0;color:var(--text-light);opacity:0.9;}
+  .foot-col a:hover{opacity:1;text-decoration:underline;}
+  .foot-links{display:flex;gap:14px;margin-top:14px;}
+  .foot-links a{
+    display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;
+    border:1.5px solid rgba(255,255,255,0.5);border-radius:50%;color:var(--text-light);
+    transition:background .15s, color .15s;padding:0;
+  }
+  .foot-links a:hover{background:var(--text-light);color:var(--primary);}
+  .foot-note{font-size:0.72rem;opacity:0.75;border-top:1px solid rgba(255,255,255,0.2);padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+  .skip-link{
+    position:absolute;top:-100px;left:12px;z-index:200;
+    background:var(--background-dark);color:var(--text-light);padding:12px 18px;
+    font-weight:700;text-transform:uppercase;font-size:0.8rem;border-radius:6px;
+    transition:top .15s;
+  }
+  .skip-link:focus{top:12px;}
+</style>
+</head>
+<body>
+
+<svg style="display:none" aria-hidden="true">
+  <symbol id="ic-whatsapp" viewBox="0 0 24 24">
+    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.2 0 4.27.86 5.82 2.42a8.2 8.2 0 0 1 2.42 5.82c0 4.54-3.7 8.24-8.25 8.24-1.4 0-2.77-.35-4-1.02l-.29-.16-2.98.78.8-2.9-.19-.3a8.15 8.15 0 0 1-1.26-4.38c0-4.55 3.7-8.5 8.25-8.5m-3.6 4.62c-.16 0-.42.06-.65.31-.22.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.55.13.16 1.75 2.8 4.3 3.83 2.13.85 2.56.68 3.03.64.46-.04 1.5-.6 1.71-1.19.21-.58.21-1.08.15-1.18-.06-.1-.22-.16-.47-.29-.25-.13-1.5-.74-1.73-.82-.23-.08-.4-.13-.57.13-.16.25-.65.82-.8.99-.15.16-.29.19-.55.06-.25-.13-1.06-.39-2.02-1.24-.75-.66-1.25-1.49-1.4-1.74-.14-.25-.01-.38.11-.51.12-.12.25-.29.38-.44.12-.15.16-.25.25-.42.08-.16.04-.31-.02-.44-.06-.13-.57-1.4-.79-1.9-.2-.5-.42-.43-.57-.43z"/>
+  </symbol>
+</svg>
+
+<a class="skip-link" href="#main-content">Saltar al contenido</a>
+
+<div class="announce">Delivery gratis desde S/.30 · Pedidos directo por WhatsApp</div>
+
+<header>
+  <div class="nav">
+    <div class="brand"><img src="assets/logo.webp" alt="Oli's Burger"> Oli's Burger</div>
+    <nav class="links">
+      <a href="#menu">Menú</a>
+      <a href="#social">Reseñas</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#ubicacion">Sedes</a>
+    </nav>
+    <a class="btn btn-red btn-pill header-cta" href="https://wa.me/51938132492?text=Hola%20Oli%27s%20Burger!%20Quiero%20hacer%20un%20pedido." target="_blank" rel="noopener"><svg class="wa-icon"><use href="#ic-whatsapp"/></svg> Pedir</a>
+  </div>
+</header>
+
+<main id="main-content">
+<section class="hero">
+  <img class="hero-photo" src="assets/hero.webp" alt="Hamburguesa Oli's Burger">
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="dot"></span><span class="hero-eyebrow-text">25 años · SJL / Cercado de Lima</span>
+      <span class="status-badge" id="open-status"><span class="status-dot" id="open-status-dot"></span><span id="open-status-text">Verificando…</span></span>
+    </div>
+    <h1>Hamburguesas<br>más <span>bravas</span><br>de la zona</h1>
+    <p class="lead">Carne 100% artesanal preparada el mismo día. Pollo broaster, salchipapas y bebidas heladas. El sabor que ya conoces, ahora a un clic de distancia.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-red btn-pill" href="#menu">Ver menú →</a>
+      <a class="btn btn-outline-light btn-pill" href="https://wa.me/51938132492?text=Hola%20Oli%27s%20Burger!%20Quiero%20hacer%20un%20pedido." target="_blank" rel="noopener"><svg class="wa-icon"><use href="#ic-whatsapp"/></svg> Pedir por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<div class="datastrip reveal">
+  <div class="wrap">
+    <div class="datastrip-grid">
+      <div class="datastrip-cell"><b>25</b><span>Años de tradición</span></div>
+      <div class="datastrip-cell"><b>2</b><span>Sedes: SJL y Cercado</span></div>
+      <div class="datastrip-cell"><b>6PM–3AM</b><span>Todos los días</span></div>
+      <div class="datastrip-cell"><b>Gratis</b><span>Delivery desde S/.30</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="menu">
+  <div class="wrap reveal">
+    <div class="section-head">
+      <span class="eyebrow-label">15 productos · 4 categorías</span>
+      <h2>El menú</h2>
+      <p>El sabor de siempre, listo para pedir por WhatsApp</p>
+    </div>
+    <div class="cat-tabs" id="cat-tabs"></div>
+    <div class="product-grid" id="product-grid"></div>
+  </div>
+</section>
+
+<div class="ticket-wrap">
+  <div class="ticket-bar" id="ticket-bar">
+    <span class="eyebrow-label"><span class="ticket-count" id="ticket-count">0</span> Tu pedido</span>
+    <span class="ticket-bar-right">
+      <span class="ticket-total" id="ticket-total-preview">S/ 0.00</span>
+      <span class="ticket-chevron" id="ticket-chevron" aria-hidden="true">▾</span>
+    </span>
+  </div>
+  <div class="ticket-panel" id="ticket-panel">
+    <div class="ticket-items" id="ticket-items">
+      <p class="ticket-empty">Añade productos del menú para armar tu pedido…</p>
+    </div>
+    <div class="ticket-footer">
+      <div class="ticket-total-row"><span>Total</span><span id="ticket-total-final">S/ 0.00</span></div>
+      <p class="ticket-note">*Precios de la carta real. Confirmamos disponibilidad por WhatsApp.</p>
+      <p class="ticket-delivery">🛵 Delivery gratis desde S/.30</p>
+      <a class="btn btn-red btn-block" id="wa-checkout" href="#" target="_blank" rel="noopener"><svg class="wa-icon"><use href="#ic-whatsapp"/></svg> Enviar pedido por WhatsApp →</a>
+    </div>
+  </div>
+</div>
+
+<section id="social">
+  <div class="wrap reveal">
+    <div class="section-head">
+      <span class="eyebrow-label">Data verificada</span>
+      <h2>Nos respaldan</h2>
+      <p>Lo que dicen nuestros clientes reales, no marketing</p>
+    </div>
+    <div class="proof-grid">
+      <div class="proof-cell"><b>5.0★</b><span>Facebook · 2 reseñas</span><span class="src">Oli's Burger - Zárate</span></div>
+      <div class="proof-cell"><b>4.4★</b><span>Facebook · 7 reseñas</span><span class="src">Oli's Burger II</span></div>
+      <div class="proof-cell"><b>330+</b><span>Seguidores Instagram</span><span class="src">@olis_burger_2</span></div>
+      <div class="proof-cell"><b>138.3k</b><span>Vistas en TikTok</span><span class="src">Reseña de @el_oscar</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="nosotros">
+  <div class="wrap reveal">
+    <div class="section-head">
+      <span class="eyebrow-label">Desde el 2001</span>
+      <h2>Nosotros</h2>
+    </div>
+    <div class="story-block">
+      <p class="story-quote">Todo comenzó con una receta familiar y una parrilla caliente. En Oli's Burger somos el sabor de barrio, la tradición y esa hamburguesa casera que te salva el hambre de madrugada.</p>
+      <p class="story-sub">25 años preparando las hamburguesas más bravas y caseras de la zona — de un solo local en SJL a dos sedes en Lima.</p>
+    </div>
+  </div>
+</section>
+
+<section id="ubicacion">
+  <div class="wrap reveal">
+    <div class="section-head">
+      <span class="eyebrow-label">Lima, Perú</span>
+      <h2>Sedes</h2>
+    </div>
+    <div class="loc-grid">
+      <div class="loc-card">
+        <div class="loc-map"><iframe src="https://www.google.com/maps?q=Av.+Pir%C3%A1mide+del+Sol+398,+San+Juan+de+Lurigancho,+Lima&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa Sede SJL — Principal"></iframe></div>
+        <h3>Sede SJL — Principal</h3>
+        <div class="loc-row"><span class="k">Dirección</span><span class="v">Av. Pirámide del Sol 398</span></div>
+        <div class="loc-row"><span class="k">Distrito</span><span class="v">San Juan de Lurigancho</span></div>
+        <div class="loc-row"><span class="k">Horario</span><span class="v">6:00 PM – 3:00 AM</span></div>
+        <div class="loc-row"><span class="k">Pedidos</span><span class="v">WhatsApp +51 938 132 492</span></div>
+        <a class="btn btn-red loc-map-btn" href="https://www.google.com/maps/search/?api=1&query=Av.+Pir%C3%A1mide+del+Sol+398%2C+San+Juan+de+Lurigancho%2C+Lima" target="_blank" rel="noopener">Ver en Google Maps →</a>
+      </div>
+      <div class="loc-card">
+        <div class="loc-map"><iframe src="https://www.google.com/maps?q=Av.+Luis+Braille+1489,+Cercado+de+Lima,+Lima&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa Sede Cercado — Alterna"></iframe></div>
+        <h3>Sede Cercado — Alterna</h3>
+        <div class="loc-row"><span class="k">Dirección</span><span class="v">Av. Luis Braille 1489</span></div>
+        <div class="loc-row"><span class="k">Distrito</span><span class="v">Cercado de Lima</span></div>
+        <div class="loc-row"><span class="k">Horario</span><span class="v">6:00 PM – 3:00 AM</span></div>
+        <div class="loc-row"><span class="k">Pedidos</span><span class="v">WhatsApp +51 938 132 492</span></div>
+        <a class="btn btn-red loc-map-btn" href="https://www.google.com/maps/search/?api=1&query=Av.+Luis+Braille+1489%2C+Cercado+de+Lima%2C+Lima" target="_blank" rel="noopener">Ver en Google Maps →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="footer-brand">Oli's Burger</div>
+        <p style="opacity:0.85;font-size:0.85rem;max-width:32ch;">25 años de hamburguesas artesanales, pollo broaster y salchipapas en Lima.</p>
+        <div class="foot-links">
+          <a href="https://wa.me/51938132492?text=Hola%20Oli%27s%20Burger!%20Quiero%20hacer%20un%20pedido." target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="wa-icon"><use href="#ic-whatsapp"/></svg></a>
+          <a href="https://www.instagram.com/olis_burger_2/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="https://www.facebook.com/OlisBurger/" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Explora</h4>
+        <a href="#menu">Menú</a>
+        <a href="#social">Reseñas</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#ubicacion">Sedes</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contacto</h4>
+        <a href="https://wa.me/51938132492">WhatsApp +51 938 132 492</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Av.+Pir%C3%A1mide+del+Sol+398%2C+San+Juan+de+Lurigancho%2C+Lima" target="_blank" rel="noopener">Av. Pirámide del Sol 398, SJL</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Av.+Luis+Braille+1489%2C+Cercado+de+Lima%2C+Lima" target="_blank" rel="noopener">Av. Luis Braille 1489, Cercado</a>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>© 2026 Oli's Burger. Todos los derechos reservados.</span>
+      <span>Rev. 1.0 · Sitio construido a medida, sin WordPress</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const MENU = {
+    hamburguesas: {
+      label: 'Hamburguesas',
+      items: [
+        {id:'chef', name:'Chef', price:19.50, img:'assets/menu/chef.webp'},
+        {id:'pobre', name:'Hamburguesas a lo pobre', price:15.00, img:'assets/menu/hamburguesas-a-lo-pobre.webp'},
+        {id:'brutal', name:"La Brutal", price:25.00, img:'assets/menu/la-brutal.webp'},
+        {id:'royal', name:'Royal Parrillero', price:18.50, img:'assets/menu/royal-parrillero.webp'},
+      ]
+    },
+    broaster: {
+      label: 'Pollo Broaster',
+      items: [
+        {id:'alita', name:'Alita Broaster', price:13.00, img:'assets/menu/alita-broaster.webp'},
+        {id:'pecho', name:'Pecho Broaster', price:19.00, img:'assets/menu/pecho-broaster.webp'},
+        {id:'pierna', name:'Pierna Broaster', price:14.00, img:'assets/menu/pierna-broaster.webp'},
+      ]
+    },
+    salchipapas: {
+      label: 'Salchipapas',
+      items: [
+        {id:'crispy', name:'Salchi Crispy Trozos', price:18.00, img:'assets/menu/salchi-crispy.webp'},
+        {id:'especial', name:'Salchipapa Especial', price:19.50, img:'assets/menu/salchipapa-especial.webp'},
+        {id:'simple', name:'Salchipapa Simple', price:18.50, img:'assets/menu/salchipapa-simple.webp'},
+      ]
+    },
+    bebidas: {
+      label: 'Bebidas',
+      items: [
+        {id:'7up', name:'7Up', price:5.00, img:'assets/menu/7up.webp'},
+        {id:'coca', name:'Coca Cola', price:5.00, img:'assets/menu/coca-cola.webp'},
+        {id:'inka', name:'Inka Cola', price:5.00, img:'assets/menu/inka-cola.webp'},
+        {id:'pepsi', name:'Pepsi', price:5.00, img:'assets/menu/pepsi.webp'},
+        {id:'sprite', name:'Sprite', price:5.00, img:'assets/menu/sprite.webp'},
+      ]
+    }
+  };
+  const ALL_ITEMS = Object.values(MENU).flatMap(c => c.items);
+  const WHATSAPP_NUMBER = '51938132492';
+
+  let activeCat = 'hamburguesas';
+  let cart = {};
+
+  const catTabs = document.getElementById('cat-tabs');
+  catTabs.setAttribute('role', 'tablist');
+  catTabs.setAttribute('aria-label', 'Categorías del menú');
+  Object.keys(MENU).forEach(key=>{
+    const b = document.createElement('button');
+    b.className = 'cat-tab' + (key===activeCat ? ' active' : '');
+    b.textContent = MENU[key].label;
+    b.setAttribute('role', 'tab');
+    b.setAttribute('aria-selected', key===activeCat ? 'true' : 'false');
+    b.onclick = () => { activeCat = key; renderTabs(); renderGrid(); };
+    b.dataset.key = key;
+    catTabs.appendChild(b);
+  });
+
+  function renderTabs(){
+    [...catTabs.children].forEach(b => {
+      const isActive = b.dataset.key === activeCat;
+      b.classList.toggle('active', isActive);
+      b.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+  }
+
+  function fmt(n){ return 'S/ ' + n.toFixed(2); }
+
+  const grid = document.getElementById('product-grid');
+  function renderGrid(){
+    grid.innerHTML = '';
+    MENU[activeCat].items.forEach(item=>{
+      const qty = cart[item.id] || 0;
+      const card = document.createElement('div');
+      card.className = 'product-card';
+      card.innerHTML = `
+        <div class="product-photo"><img src="${item.img}" alt="${item.name}" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-name">${item.name}</div>
+          <div class="product-price-row"><span class="leader"></span><span class="product-price">${fmt(item.price)}</span></div>
+          ${qty > 0 ? `
+            <div class="qty-row">
+              <button class="qty-btn" data-action="dec" data-id="${item.id}" aria-label="Quitar una unidad de ${item.name}">−</button>
+              <div class="qty-val" aria-live="polite">${qty}</div>
+              <button class="qty-btn" data-action="inc" data-id="${item.id}" aria-label="Añadir una unidad de ${item.name}">+</button>
+            </div>
+          ` : `<button class="btn add-btn" data-action="inc" data-id="${item.id}" aria-label="Añadir ${item.name} al pedido">+ Añadir</button>`}
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+    grid.querySelectorAll('[data-action]').forEach(el=>{
+      el.addEventListener('click', () => {
+        const id = el.dataset.id;
+        const action = el.dataset.action;
+        if(action === 'inc') cart[id] = (cart[id]||0) + 1;
+        if(action === 'dec') cart[id] = Math.max(0, (cart[id]||0) - 1);
+        if(cart[id] === 0) delete cart[id];
+        renderGrid();
+        renderTicket();
+        if(action === 'inc'){
+          const countEl = document.getElementById('ticket-count');
+          countEl.classList.remove('bump');
+          void countEl.offsetWidth;
+          countEl.classList.add('bump');
+        }
+      });
+    });
+  }
+
+  const ticketBar = document.getElementById('ticket-bar');
+  const ticketPanel = document.getElementById('ticket-panel');
+  ticketBar.setAttribute('aria-expanded', 'false');
+  ticketBar.addEventListener('click', () => {
+    const isOpen = ticketPanel.classList.toggle('open');
+    ticketBar.classList.toggle('open', isOpen);
+    ticketBar.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  function renderTicket(){
+    const ticketItems = document.getElementById('ticket-items');
+    const entries = Object.entries(cart).filter(([,q]) => q > 0);
+    const count = entries.reduce((s,[,q]) => s+q, 0);
+    let total = 0;
+    document.getElementById('ticket-count').textContent = count;
+
+    if(entries.length === 0){
+      ticketItems.innerHTML = '<p class="ticket-empty">Añade productos del menú para armar tu pedido…</p>';
+    } else {
+      let html = '';
+      entries.forEach(([id, qty])=>{
+        const item = ALL_ITEMS.find(i => i.id === id);
+        const lineTotal = item.price * qty;
+        total += lineTotal;
+        html += `<div class="ticket-item"><span class="name">${qty}× ${item.name}</span><span class="leader"></span><span class="line-total">${fmt(lineTotal)}</span></div>`;
+      });
+      ticketItems.innerHTML = html;
+    }
+
+    document.getElementById('ticket-total-preview').textContent = fmt(total);
+    document.getElementById('ticket-total-final').textContent = fmt(total);
+
+    const waBtn = document.getElementById('wa-checkout');
+    if(entries.length === 0){
+      waBtn.setAttribute('aria-disabled', 'true');
+      waBtn.style.opacity = '0.4';
+      waBtn.style.pointerEvents = 'none';
+      waBtn.removeAttribute('href');
+    } else {
+      waBtn.style.opacity = '1';
+      waBtn.style.pointerEvents = 'auto';
+      waBtn.removeAttribute('aria-disabled');
+      const lines = entries.map(([id, qty])=>{
+        const item = ALL_ITEMS.find(i => i.id === id);
+        return `${qty}x ${item.name} (${fmt(item.price * qty)})`;
+      });
+      const msg = `Hola Oli's Burger! Quiero pedir:\n${lines.join('\n')}\n\nTotal: ${fmt(total)}\n\n¿Confirman disponibilidad?`;
+      waBtn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+    }
+  }
+
+  renderGrid();
+  renderTicket();
+
+  function updateOpenStatus(){
+    const limaHour = Number(new Intl.DateTimeFormat('en-US', {timeZone:'America/Lima', hour:'numeric', hour12:false}).format(new Date()));
+    const isOpen = limaHour >= 18 || limaHour < 3;
+    const dot = document.getElementById('open-status-dot');
+    const text = document.getElementById('open-status-text');
+    dot.className = 'status-dot ' + (isOpen ? 'open' : 'closed');
+    text.textContent = isOpen ? 'Abierto ahora' : 'Cerrado · Abre 6PM';
+  }
+  updateOpenStatus();
+  setInterval(updateOpenStatus, 60000);
+
+  const revealObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  const navLinks = [...document.querySelectorAll('nav.links a')];
+  const navObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        navLinks.forEach(a => a.classList.toggle('current', a.getAttribute('href') === '#' + entry.target.id));
+      }
+    });
+  }, {rootMargin:'-40% 0px -50% 0px'});
+  ['menu','social','nosotros','ubicacion'].forEach(id => {
+    const el = document.getElementById(id);
+    if(el) navObserver.observe(el);
+  });
+</script>
+
+</body>
+</html>
